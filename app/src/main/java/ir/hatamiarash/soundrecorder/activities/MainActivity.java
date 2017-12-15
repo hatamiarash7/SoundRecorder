@@ -1,9 +1,7 @@
 package ir.hatamiarash.soundrecorder.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -14,43 +12,44 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.astuetz.PagerSlidingTabStrip;
+
+import co.ronash.pushe.Pushe;
 import ir.hatamiarash.soundrecorder.R;
 import ir.hatamiarash.soundrecorder.fragments.FileViewerFragment;
-import ir.hatamiarash.soundrecorder.fragments.LicensesFragment;
 import ir.hatamiarash.soundrecorder.fragments.RecordFragment;
 
-
-public class MainActivity extends ActionBarActivity{
-
+public class MainActivity extends ActionBarActivity {
+    
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-
+    
     private PagerSlidingTabStrip tabs;
     private ViewPager pager;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Pushe.initialize(this, true);
+        
         pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(new MyAdapter(getSupportFragmentManager()));
         tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         tabs.setViewPager(pager);
-
+        
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setPopupTheme(R.style.ThemeOverlay_AppCompat_Light);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
     }
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -66,39 +65,39 @@ public class MainActivity extends ActionBarActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
-
+    
     public class MyAdapter extends FragmentPagerAdapter {
-        private String[] titles = { getString(R.string.tab_title_record),
-                getString(R.string.tab_title_saved_recordings) };
-
+        private String[] titles = {getString(R.string.tab_title_record),
+                getString(R.string.tab_title_saved_recordings)};
+        
         public MyAdapter(FragmentManager fm) {
             super(fm);
         }
-
+        
         @Override
         public Fragment getItem(int position) {
-            switch(position){
-                case 0:{
+            switch (position) {
+                case 0: {
                     return RecordFragment.newInstance(position);
                 }
-                case 1:{
+                case 1: {
                     return FileViewerFragment.newInstance(position);
                 }
             }
             return null;
         }
-
+        
         @Override
         public int getCount() {
             return titles.length;
         }
-
+        
         @Override
         public CharSequence getPageTitle(int position) {
             return titles[position];
         }
     }
-
+    
     public MainActivity() {
     }
 }
