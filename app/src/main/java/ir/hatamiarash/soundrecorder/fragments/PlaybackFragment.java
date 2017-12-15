@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder.fragments;
+package ir.hatamiarash.soundrecorder.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -16,8 +16,8 @@ import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.danielkim.soundrecorder.R;
-import com.danielkim.soundrecorder.RecordingItem;
+import ir.hatamiarash.soundrecorder.R;
+import ir.hatamiarash.soundrecorder.RecordingItem;
 import com.melnykov.fab.FloatingActionButton;
 
 import java.io.IOException;

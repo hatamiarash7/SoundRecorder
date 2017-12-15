@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder.activities;
+package ir.hatamiarash.soundrecorder.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,10 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.danielkim.soundrecorder.R;
-import com.danielkim.soundrecorder.fragments.FileViewerFragment;
-import com.danielkim.soundrecorder.fragments.LicensesFragment;
-import com.danielkim.soundrecorder.fragments.RecordFragment;
+import ir.hatamiarash.soundrecorder.R;
+import ir.hatamiarash.soundrecorder.fragments.FileViewerFragment;
+import ir.hatamiarash.soundrecorder.fragments.LicensesFragment;
+import ir.hatamiarash.soundrecorder.fragments.RecordFragment;
 
 
 public class MainActivity extends ActionBarActivity{

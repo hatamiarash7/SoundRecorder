@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder.adapters;
+package ir.hatamiarash.soundrecorder.adapters;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -19,11 +19,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.text.format.DateUtils;
 
-import com.danielkim.soundrecorder.DBHelper;
-import com.danielkim.soundrecorder.R;
-import com.danielkim.soundrecorder.RecordingItem;
-import com.danielkim.soundrecorder.fragments.PlaybackFragment;
-import com.danielkim.soundrecorder.listeners.OnDatabaseChangedListener;
+import ir.hatamiarash.soundrecorder.DBHelper;
+import ir.hatamiarash.soundrecorder.R;
+import ir.hatamiarash.soundrecorder.RecordingItem;
+import ir.hatamiarash.soundrecorder.fragments.PlaybackFragment;
+import ir.hatamiarash.soundrecorder.listeners.OnDatabaseChangedListener;
 
 import java.io.File;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder;
+package ir.hatamiarash.soundrecorder;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,7 +15,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.danielkim.soundrecorder.activities.MainActivity;
+import ir.hatamiarash.soundrecorder.activities.MainActivity;
 
 import java.io.File;
 import java.io.IOException;
