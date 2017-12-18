@@ -24,9 +24,6 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Created by Daniel on 12/28/2014.
- */
 public class RecordingService extends Service {
 
     private static final String LOG_TAG = "RecordingService";

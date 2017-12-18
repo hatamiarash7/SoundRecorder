@@ -19,11 +19,8 @@ import ir.hatamiarash.soundrecorder.fragments.FileViewerFragment;
 import ir.hatamiarash.soundrecorder.fragments.RecordFragment;
 
 public class MainActivity extends ActionBarActivity {
-    
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    
-    private PagerSlidingTabStrip tabs;
-    private ViewPager pager;
+    PagerSlidingTabStrip tabs;
+    ViewPager pager;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +35,17 @@ public class MainActivity extends ActionBarActivity {
         
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setPopupTheme(R.style.ThemeOverlay_AppCompat_Light);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
+        setSupportActionBar(toolbar);
     }
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        // Handle presses on the action bar items
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Intent i = new Intent(this, SettingsActivity.class);
@@ -67,10 +57,9 @@ public class MainActivity extends ActionBarActivity {
     }
     
     public class MyAdapter extends FragmentPagerAdapter {
-        private String[] titles = {getString(R.string.tab_title_record),
-                getString(R.string.tab_title_saved_recordings)};
+        private String[] titles = {getString(R.string.tab_title_record), getString(R.string.tab_title_saved_recordings)};
         
-        public MyAdapter(FragmentManager fm) {
+        MyAdapter(FragmentManager fm) {
             super(fm);
         }
         
@@ -96,8 +85,5 @@ public class MainActivity extends ActionBarActivity {
         public CharSequence getPageTitle(int position) {
             return titles[position];
         }
-    }
-    
-    public MainActivity() {
     }
 }

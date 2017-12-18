@@ -11,9 +11,7 @@ import ir.hatamiarash.soundrecorder.MySharedPreferences;
 import ir.hatamiarash.soundrecorder.R;
 import ir.hatamiarash.soundrecorder.activities.SettingsActivity;
 
-/**
- * Created by Daniel on 5/22/2017.
- */
+
 
 public class SettingsFragment extends PreferenceFragment {
     @Override

@@ -9,9 +9,7 @@ import android.view.View;
 
 import ir.hatamiarash.soundrecorder.R;
 
-/**
- * Created by Daniel on 1/3/2015.
- */
+
 public class LicensesFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
