@@ -6,3 +6,7 @@
 /app/build/
 *.txt
 *.iml
+*.png
+*.jpg
+*.json
+*.apk
