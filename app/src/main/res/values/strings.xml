@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- About -->
-    <string name="link" translatable="false">Website: github.com/dkim0419/SoundRecorder</string>
+    <string name="link" translatable="false">Website: http://arash-hatami.ir</string>
 
     <!-- Toolbar -->
     <string name="app_name">Sound Recorder</string>
@@ -17,10 +17,10 @@
     <string name="toast_file_exists">The file %1$s already exists. Please choose a different file name.</string>
 
     <!-- Notifications -->
-    <string name="notification_recording">Recording...</string>
+    <string name="notification_recording">Recording …</string>
 
     <!-- Dialogs -->
-    <string name="dialog_title_delete">Confirm Delete...</string>
+    <string name="dialog_title_delete">Confirm Delete …</string>
     <string name="dialog_text_delete">Are you sure you would like to delete this file?</string>
     <string name="dialog_title_licenses">Open Source Licenses</string>
     <string name="dialog_title_share">Share File</string>
